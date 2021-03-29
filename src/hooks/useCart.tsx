@@ -100,9 +100,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       } else {
         throw Error();
       }
-
-      setCart(updatedCart);
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
     } catch {
       toast.error('Erro na alteração de quantidade do produto');
     }
